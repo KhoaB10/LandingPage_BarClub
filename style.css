@@ -1651,23 +1651,41 @@ body.light-theme #lottieIconSocial svg {
     overflow: hidden;
 }
 
-/* Inline Lottie wrappers for footer info links */
-.lottie-inline-wrap {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
+/* Footer contact adaptive elements */
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.lottie-inline-wrap svg {
+.footer-icon-wrap {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.footer-icon-wrap svg {
     width: 100% !important;
     height: 100% !important;
     display: block;
 }
 
-/* Specific styling for envelope icon in footer */
-.footer-envelope-icon {
-    font-size: 1.1rem;
-    vertical-align: middle;
+/* In dark mode, hide Lottie contact SVGs */
+.lottie-contact-wrap svg, .footer-icon-wrap svg {
+    display: none !important;
+}
+
+/* In light mode, display Lottie contact SVGs */
+body.light-theme .lottie-contact-wrap svg, body.light-theme .footer-icon-wrap svg {
+    display: block !important;
+}
+
+/* Lottie Contact wrapper sizing */
+.lottie-contact-wrap svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
 }

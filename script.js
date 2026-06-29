@@ -377,11 +377,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loadServiceIcon('lottieSocialFacebook', window.lottieFacebookIcon);
     loadServiceIcon('lottieSocialTiktok', window.lottieTiktokIcon);
 
-    /* Contact Details list Lottie Icons */
-    loadServiceIcon('lottieContactPhone', window.lottieAdsIcon);
-    loadServiceIcon('lottieContactLocation', window.lottieWebIcon);
+    /* Contact Details Section Lottie Icons */
+    loadServiceIcon('lottieContactPhone', window.lottiePhoneIcon);
+    loadServiceIcon('lottieContactEmail', window.lottieEmailIcon);
+    loadServiceIcon('lottieContactLocation', window.lottieLocationIcon);
 
-    /* Footer Contact Info Lottie Icons */
-    loadServiceIcon('lottieFooterPhone', window.lottieAdsIcon);
-    loadServiceIcon('lottieFooterLocation', window.lottieWebIcon);
+    /* Footer Contact Details Lottie Icons */
+    loadServiceIcon('lottieFooterPhone', window.lottiePhoneIcon);
+    loadServiceIcon('lottieFooterEmail', window.lottieEmailIcon);
+    loadServiceIcon('lottieFooterLocation', window.lottieLocationIcon);
 });
