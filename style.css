@@ -1673,14 +1673,15 @@ body.light-theme #lottieIconSocial svg {
     display: block;
 }
 
-/* In dark mode, hide Lottie contact SVGs */
+/* Display Lottie contact SVGs in both themes, making them white in dark theme */
 .lottie-contact-wrap svg, .footer-icon-wrap svg {
-    display: none !important;
+    display: block !important;
+    filter: brightness(0) invert(1) !important;
 }
 
-/* In light mode, display Lottie contact SVGs */
+/* In light mode, remove white filter to show default dark shapes */
 body.light-theme .lottie-contact-wrap svg, body.light-theme .footer-icon-wrap svg {
-    display: block !important;
+    filter: none !important;
 }
 
 /* Lottie Contact wrapper sizing */
