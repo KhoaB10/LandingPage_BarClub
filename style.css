@@ -1379,10 +1379,11 @@ body.light-theme .ads-budget-container {
 
 /* Light Theme Variable Overrides */
 body.light-theme {
-    --bg-dark: #f8f9fa;
-    --border-color: rgba(0, 0, 0, 0.08);
-    --text-light: #212529;
-    --text-muted: #6c757d;
+    --bg-dark: #f8fafc; /* Beautiful soft slate background */
+    --border-color: rgba(15, 23, 42, 0.08);
+    --text-light: #334155; /* Slate-700 for premium body text */
+    --text-muted: #64748b; /* Slate-500 for secondary details */
+    --text-heading: #0f172a; /* Slate-900 for bold headers */
 }
 
 body.light-theme .theme-toggle-btn {
@@ -1407,15 +1408,12 @@ body.light-theme .nav-link {
     color: #495057;
 }
 body.light-theme .nav-link:hover, body.light-theme .nav-link.active {
-    color: #000000;
+    color: var(--text-heading);
     text-shadow: none;
-}
-body.light-theme .option-title {
-    color: #212529;
 }
 body.light-theme .calc-option {
     background: rgba(0, 0, 0, 0.02);
-    border-color: rgba(0, 0, 0, 0.06);
+    border-color: var(--border-color);
 }
 body.light-theme .calc-option:hover {
     background: rgba(0, 0, 0, 0.04);
@@ -1429,74 +1427,50 @@ body.light-theme .experience-badge {
 }
 body.light-theme .about-section {
     background: #ffffff;
-    color: #212529;
 }
 body.light-theme .services-section {
-    background: #f8f9fa;
-    color: #212529;
+    background: #f8fafc;
 }
 body.light-theme .portfolio-section {
     background: #ffffff;
-    color: #212529;
 }
 body.light-theme .calculator-section {
-    background: #f8f9fa;
-    color: #212529;
+    background: #f8fafc;
 }
 body.light-theme .contact-section {
     background: #ffffff;
-    color: #212529;
 }
 body.light-theme .main-footer {
-    background: #f8f9fa;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: #f8fafc;
+    border-top: 1px solid var(--border-color);
 }
 body.light-theme .footer-bottom {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--border-color);
 }
 body.light-theme .footer-about p, body.light-theme .footer-contact p, body.light-theme .footer-links a {
-    color: #495057;
+    color: var(--text-muted);
 }
 body.light-theme .footer-links a:hover {
-    color: #000000;
-}
-body.light-theme .section-title {
-    color: #212529;
+    color: var(--text-heading);
 }
 body.light-theme .glass-card {
     background: rgba(255, 255, 255, 0.85);
-    border-color: rgba(0, 0, 0, 0.08);
+    border-color: var(--border-color);
     box-shadow: 0 15px 35px rgba(0,0,0,0.05);
 }
-body.light-theme .summary-details {
-    color: #212529;
-}
-body.light-theme .summary-item span {
-    color: #212529;
-}
 body.light-theme .calculator-wrapper h3 {
-    color: #212529;
-    border-color: rgba(0, 0, 0, 0.06);
-}
-body.light-theme .contact-mini-form h4 {
-    color: #212529;
+    border-color: var(--border-color);
 }
 body.light-theme input[type="text"], body.light-theme input[type="tel"], body.light-theme input[type="email"], body.light-theme textarea {
     background: #ffffff;
-    border-color: rgba(0, 0, 0, 0.12);
-    color: #212529;
+    border-color: var(--border-color);
+    color: var(--text-light);
 }
 body.light-theme input[type="text"]:focus, body.light-theme input[type="tel"]:focus, body.light-theme input[type="email"]:focus, body.light-theme textarea:focus {
     border-color: var(--primary-cyan);
 }
-body.light-theme .portfolio-details h4 {
-    color: #212529;
-}
-body.light-theme .contact-form-wrapper h3 {
-    color: #212529;
-}
 body.light-theme .contact-form-wrapper label {
-    color: #495057;
+    color: var(--text-muted);
 }
 
 /* Premium Light Theme Tweaks */
