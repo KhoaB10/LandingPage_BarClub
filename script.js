@@ -265,4 +265,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 6000);
         });
     }
+
+    /* ==========================================================================
+       Rive Animation Initialization
+       ========================================================================== */
+    const riveCanvas = document.getElementById('riveCanvas');
+    if (riveCanvas && typeof rive !== 'undefined') {
+        try {
+            const r = new rive.Rive({
+                src: 'assets/nested-artboard-demo.riv',
+                canvas: riveCanvas,
+                autoplay: true,
+                onLoad: () => {
+                    r.resizeDrawingBuffer();
+                    r.resizeToCanvas();
+                }
+            });
+            
+            // Handle window resizing
+            window.addEventListener('resize', () => {
+                if (r) {
+                    r.resizeDrawingBuffer();
+                    r.resizeToCanvas();
+                }
+            });
+        } catch (err) {
+            console.error('Lỗi khi tải hoạt ảnh Rive:', err);
+        }
+    }
 });

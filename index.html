@@ -17,6 +17,9 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
+    <!-- Rive Canvas Runtime -->
+    <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+    
     <!-- Custom Logic -->
     <script defer src="script.js"></script>
     
@@ -236,6 +239,25 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rive Interactive Section -->
+        <section id="interactive" class="interactive-section scroll-reveal" style="padding: 100px 0; background: rgba(8, 8, 12, 0.6); position: relative;">
+            <div class="container text-center">
+                <span class="section-badge text-magenta">TRẢI NGHIỆM ĐỒ HỌA SỐ</span>
+                <h2 class="section-title">Không Gian Tương Tác <span class="gradient-text">Rive Interactive</span></h2>
+                <p class="section-subtitle text-muted" style="max-width: 600px; margin: 0 auto 40px auto; line-height: 1.6;">
+                    Khám phá đồ họa vector chuyển động chất lượng cao cực kỳ mượt mà. Di chuyển chuột hoặc nhấp trực tiếp vào bảng vẽ để tương tác với mô hình 3D.
+                </p>
+                <div class="rive-wrapper glass-card" style="max-width: 800px; margin: 0 auto; padding: 25px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <div style="width: 100%; height: 450px; display: flex; align-items: center; justify-content: center; position: relative;">
+                        <canvas id="riveCanvas" style="width: 100%; height: 100%; max-width: 650px; display: block;"></canvas>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; font-family: 'Montserrat', sans-serif;">
+                        <i class="fa-solid fa-circle-info text-cyan m-right-5"></i> Trải nghiệm công nghệ đồ họa hoạt ảnh thế hệ mới tích hợp trực tiếp trên web.
+                    </p>
                 </div>
             </div>
         </section>
