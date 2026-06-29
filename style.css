@@ -1204,13 +1204,13 @@ body.light-theme .ads-budget-container {
 
 .scroll-reveal.reveal-hidden {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px) scale(0.97);
 }
 
 .scroll-reveal.reveal-visible {
     opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateY(0) scale(1);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Micro-Animations & Hover Effects */
@@ -1689,4 +1689,22 @@ body.light-theme .lottie-contact-wrap svg, body.light-theme .footer-icon-wrap sv
     width: 100% !important;
     height: 100% !important;
     display: block;
+}
+
+/* Liquid Follow Cursor Glow (Luxury Glassmorphism Interactive Effect) */
+.cursor-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, rgba(255, 0, 127, 0.05) 45%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    mix-blend-mode: screen;
+    will-change: left, top;
+}
+
+body.light-theme .cursor-glow {
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.05) 0%, rgba(190, 24, 93, 0.03) 45%, rgba(0, 0, 0, 0) 70%);
 }

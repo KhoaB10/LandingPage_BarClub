@@ -386,4 +386,57 @@ document.addEventListener('DOMContentLoaded', () => {
     loadServiceIcon('lottieFooterPhone', window.lottiePhoneIcon);
     loadServiceIcon('lottieFooterEmail', window.lottieEmailIcon);
     loadServiceIcon('lottieFooterLocation', window.lottieLocationIcon);
+
+    /* ==========================================================================
+       Premium Web Upgrade Animations (Liquid Cursor Glow & 3D Tilt)
+       ========================================================================== */
+    // 1. Liquid Follow Cursor Glow
+    const cursorGlow = document.getElementById('cursorGlow');
+    let mouseX = -200, mouseY = -200;
+    let glowX = -200, glowY = -200;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY + window.scrollY; // Offset by scroll position
+    });
+
+    const updateGlow = () => {
+        glowX += (mouseX - glowX) * 0.08;
+        glowY += (mouseY - glowY) * 0.08;
+        if (cursorGlow) {
+            cursorGlow.style.left = `${glowX}px`;
+            cursorGlow.style.top = `${glowY}px`;
+        }
+        requestAnimationFrame(updateGlow);
+    };
+    updateGlow();
+
+    // 2. 3D Tilt Hover Effects on Glass Cards & Portfolio Items
+    const tiltCards = document.querySelectorAll('.glass-card, .portfolio-item');
+    tiltCards.forEach(card => {
+        // Skip calculator-wrapper since it is too large for comfortable tilting
+        if (card.classList.contains('calculator-wrapper')) return;
+
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -8; // Max 8 degrees rotation
+            const rotateY = ((x - centerX) / centerX) * 8;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+            card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.12)';
+            card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+            card.style.boxShadow = '';
+            card.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        });
+    });
 });
