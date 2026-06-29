@@ -1381,9 +1381,21 @@ body.light-theme .ads-budget-container {
 body.light-theme {
     --bg-dark: #f8fafc; /* Beautiful soft slate background */
     --border-color: rgba(15, 23, 42, 0.08);
+    --border-hover: rgba(15, 23, 42, 0.15);
+    
+    --primary-cyan: #0284c7; /* Sky/Cyan-600: highly readable on light backgrounds */
+    --primary-magenta: #be185d; /* Pink-700: deep readable magenta */
+    --primary-gold: #b45309; /* Amber-700: warm golden amber */
+    
     --text-light: #334155; /* Slate-700 for premium body text */
     --text-muted: #64748b; /* Slate-500 for secondary details */
     --text-heading: #0f172a; /* Slate-900 for bold headers */
+    
+    --neon-cyan-glow: 0 0 10px rgba(2, 132, 199, 0.15);
+    --neon-magenta-glow: 0 0 10px rgba(190, 24, 93, 0.15);
+    --neon-gold-glow: 0 0 10px rgba(180, 83, 9, 0.15);
+    
+    --hero-overlay: linear-gradient(180deg, rgba(248, 250, 252, 0.35) 0%, rgba(248, 250, 252, 0.98) 100%);
 }
 
 body.light-theme .theme-toggle-btn {
@@ -1461,6 +1473,29 @@ body.light-theme .glass-card {
 body.light-theme .calculator-wrapper h3 {
     border-color: var(--border-color);
 }
+body.light-theme .calc-summary {
+    background: rgba(15, 23, 42, 0.035) !important;
+    border-color: rgba(15, 23, 42, 0.08) !important;
+}
+body.light-theme .summary-item {
+    color: var(--text-muted) !important;
+}
+body.light-theme .summary-item span:last-child {
+    color: var(--text-heading) !important;
+}
+body.light-theme .summary-total span:first-child {
+    color: var(--text-heading) !important;
+}
+body.light-theme .summary-total span:last-child {
+    background: linear-gradient(90deg, var(--primary-cyan) 0%, var(--primary-magenta) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: none !important;
+}
+body.light-theme .contact-mini-form {
+    border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
 body.light-theme input[type="text"], body.light-theme input[type="tel"], body.light-theme input[type="email"], body.light-theme textarea {
     background: #ffffff;
     border-color: var(--border-color);
@@ -1529,10 +1564,15 @@ body.light-theme .portfolio-details p {
 
 @media (max-width: 992px) {
     body.light-theme .nav-menu {
-        background: rgba(248, 249, 250, 0.98);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        background: rgba(248, 250, 252, 0.98);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
     body.light-theme .nav-menu a {
-        color: #212529 !important;
+        color: var(--text-light) !important;
     }
+}
+
+body.light-theme input::placeholder, body.light-theme textarea::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.8;
 }
