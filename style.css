@@ -1557,9 +1557,21 @@ body.light-theme .calc-hr {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-body.light-theme .info-icon {
-    background: rgba(0, 143, 160, 0.08) !important;
-    color: var(--primary-cyan) !important;
+body.light-theme .detail-icon {
+    background: rgba(190, 24, 93, 0.08) !important;
+    border-color: rgba(190, 24, 93, 0.15) !important;
+    color: var(--primary-magenta) !important;
+}
+
+.contact-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: invert(1); /* Invert dark PNGs to white in dark mode */
+}
+
+body.light-theme .contact-icon-img {
+    filter: none; /* Keep original dark color in light mode */
 }
 
 body.light-theme .portfolio-item {
