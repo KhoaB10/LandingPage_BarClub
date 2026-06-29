@@ -1277,3 +1277,155 @@ img {
         padding: 20px;
     }
 }
+
+/* ==========================================================================
+   Light/Dark Theme Style Overrides & Lottie Button
+   ========================================================================== */
+.theme-toggle-btn {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+    overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Force white SVGs inside Lottie in dark mode */
+.theme-toggle-btn svg path {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+/* Light Theme Variable Overrides */
+body.light-theme {
+    --bg-dark: #f8f9fa;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --text-light: #212529;
+    --text-muted: #6c757d;
+}
+
+body.light-theme .theme-toggle-btn {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body.light-theme .theme-toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+body.light-theme .theme-toggle-btn svg path {
+    fill: #212529 !important;
+    stroke: #212529 !important;
+}
+
+/* Light Theme overrides for key components */
+body.light-theme .main-header {
+    background: rgba(248, 249, 250, 0.9) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+}
+body.light-theme .nav-link {
+    color: #495057;
+}
+body.light-theme .nav-link:hover, body.light-theme .nav-link.active {
+    color: #000000;
+    text-shadow: none;
+}
+body.light-theme .option-title {
+    color: #212529;
+}
+body.light-theme .calc-option {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.06);
+}
+body.light-theme .calc-option:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+body.light-theme .calc-option .option-price {
+    color: var(--primary-magenta);
+}
+body.light-theme .experience-badge {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+body.light-theme .about-section {
+    background: #ffffff;
+    color: #212529;
+}
+body.light-theme .services-section {
+    background: #f8f9fa;
+    color: #212529;
+}
+body.light-theme .portfolio-section {
+    background: #ffffff;
+    color: #212529;
+}
+body.light-theme .calculator-section {
+    background: #f8f9fa;
+    color: #212529;
+}
+body.light-theme .contact-section {
+    background: #ffffff;
+    color: #212529;
+}
+body.light-theme .main-footer {
+    background: #f8f9fa;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+body.light-theme .footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+body.light-theme .footer-about p, body.light-theme .footer-contact p, body.light-theme .footer-links a {
+    color: #495057;
+}
+body.light-theme .footer-links a:hover {
+    color: #000000;
+}
+body.light-theme .section-title {
+    color: #212529;
+}
+body.light-theme .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+body.light-theme .summary-details {
+    color: #212529;
+}
+body.light-theme .summary-item span {
+    color: #212529;
+}
+body.light-theme .calculator-wrapper h3 {
+    color: #212529;
+    border-color: rgba(0, 0, 0, 0.06);
+}
+body.light-theme .contact-mini-form h4 {
+    color: #212529;
+}
+body.light-theme input[type="text"], body.light-theme input[type="tel"], body.light-theme input[type="email"], body.light-theme textarea {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #212529;
+}
+body.light-theme input[type="text"]:focus, body.light-theme input[type="tel"]:focus, body.light-theme input[type="email"]:focus, body.light-theme textarea:focus {
+    border-color: var(--primary-cyan);
+}
+body.light-theme .portfolio-details h4 {
+    color: #212529;
+}
+body.light-theme .contact-form-wrapper h3 {
+    color: #212529;
+}
+body.light-theme .contact-form-wrapper label {
+    color: #495057;
+}

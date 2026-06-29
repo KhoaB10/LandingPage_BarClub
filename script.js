@@ -305,4 +305,40 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Lỗi khi tải hoạt ảnh Rive:', err);
         }
     }
+
+    /* ==========================================================================
+       Lottie Theme Toggle Icon & Theme Switcher (CORS Safe)
+       ========================================================================== */
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle && typeof lottie !== 'undefined' && window.lottieThemeIconData) {
+        try {
+            const anim = lottie.loadAnimation({
+                container: themeToggle,
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                animationData: window.lottieThemeIconData
+            });
+
+            // Set initial frame (sun state or moon state)
+            anim.goToAndStop(0, true);
+
+            let isDarkMode = true;
+            themeToggle.addEventListener('click', () => {
+                isDarkMode = !isDarkMode;
+                
+                // Segment 0 to 105 goes from dark to light
+                // Segment 105 to 210 goes from light to dark
+                if (!isDarkMode) {
+                    anim.playSegments([0, 105], true);
+                    document.body.classList.add('light-theme');
+                } else {
+                    anim.playSegments([105, 210], true);
+                    document.body.classList.remove('light-theme');
+                }
+            });
+        } catch (err) {
+            console.error('Lỗi khi tải hoạt ảnh Lottie:', err);
+        }
+    }
 });
