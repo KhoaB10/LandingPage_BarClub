@@ -1301,10 +1301,11 @@ img {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Force white SVGs inside Lottie in dark mode */
-.theme-toggle-btn svg path {
-    fill: #ffffff !important;
-    stroke: #ffffff !important;
+/* Invert black Lottie SVGs inside the button to make them white in dark mode */
+.theme-toggle-btn svg {
+    filter: invert(1);
+    width: 32px !important;
+    height: 32px !important;
 }
 
 /* Light Theme Variable Overrides */
@@ -1323,9 +1324,8 @@ body.light-theme .theme-toggle-btn:hover {
     background: rgba(0, 0, 0, 0.06);
     border-color: rgba(0, 0, 0, 0.2);
 }
-body.light-theme .theme-toggle-btn svg path {
-    fill: #212529 !important;
-    stroke: #212529 !important;
+body.light-theme .theme-toggle-btn svg {
+    filter: none;
 }
 
 /* Light Theme overrides for key components */
