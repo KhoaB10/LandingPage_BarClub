@@ -1650,3 +1650,24 @@ body.light-theme #lottieIconSocial svg {
     justify-content: center;
     overflow: hidden;
 }
+
+/* Inline Lottie wrappers for footer info links */
+.lottie-inline-wrap {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.lottie-inline-wrap svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* Specific styling for envelope icon in footer */
+.footer-envelope-icon {
+    font-size: 1.1rem;
+    vertical-align: middle;
+}

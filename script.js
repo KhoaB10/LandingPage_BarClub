@@ -376,4 +376,12 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Contact Section Social Links Lottie Icons */
     loadServiceIcon('lottieSocialFacebook', window.lottieFacebookIcon);
     loadServiceIcon('lottieSocialTiktok', window.lottieTiktokIcon);
+
+    /* Contact Details list Lottie Icons */
+    loadServiceIcon('lottieContactPhone', window.lottieAdsIcon);
+    loadServiceIcon('lottieContactLocation', window.lottieWebIcon);
+
+    /* Footer Contact Info Lottie Icons */
+    loadServiceIcon('lottieFooterPhone', window.lottieAdsIcon);
+    loadServiceIcon('lottieFooterLocation', window.lottieWebIcon);
 });
