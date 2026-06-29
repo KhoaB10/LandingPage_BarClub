@@ -70,7 +70,7 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero-section" style="background-image: linear-gradient(180deg, rgba(8, 8, 12, 0.4) 0%, rgba(8, 8, 12, 0.95) 100%), url('assets/hero_bg.png');">
+        <section id="hero" class="hero-section" style="background-image: var(--hero-overlay), url('assets/hero_bg.png');">
             <div class="container hero-container">
                 <div class="hero-content">
                     <span class="badge neon-text-magenta animate-fade-in">DỊCH VỤ MARKETING ĐẲNG CẤP</span>
@@ -400,13 +400,13 @@
                                         <span class="option-desc">Setup, tối ưu và vận hành quảng cáo Facebook, Google, Tiktok, Zalo (Phí dịch vụ 15% ngân sách).</span>
                                         
                                         <!-- Real Interactive Input for Ads Budget -->
-                                        <div class="ads-budget-container" id="adsBudgetContainer" style="display: none; margin-top: 12px; padding: 12px; background: rgba(255,255,255,0.04); border-radius: 8px; border: 1px solid rgba(0, 240, 255, 0.15);">
-                                            <label style="font-size: 0.8rem; color: var(--primary-cyan); display: block; margin-bottom: 8px; font-family: 'Montserrat', sans-serif; font-weight: 600;">Ngân sách chạy quảng cáo dự kiến (VNĐ/tháng):</label>
-                                            <div style="display: flex; gap: 10px; align-items: center;">
-                                                <input type="number" id="adsBudgetInput" value="20000000" min="2000000" step="1000000" style="padding: 8px 12px; font-size: 0.85rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-dark); color: #fff; width: 100%; max-width: 160px; font-family: 'Montserrat', sans-serif; font-weight: 700;">
-                                                <span style="font-size: 0.85rem; color: var(--text-light); font-weight: 500;">VNĐ</span>
+                                        <div class="ads-budget-container" id="adsBudgetContainer" style="display: none;">
+                                            <label class="ads-budget-label">Ngân sách chạy quảng cáo dự kiến (VNĐ/tháng):</label>
+                                            <div class="ads-budget-row">
+                                                <input type="number" id="adsBudgetInput" value="20000000" min="2000000" step="1000000">
+                                                <span class="currency-label">VNĐ</span>
                                             </div>
-                                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 8px;">(Phí quản lý quảng cáo 15% = <span id="adsFeeLabel" style="color: var(--primary-magenta); font-weight: 700;">3,000,000đ</span>)</span>
+                                            <span class="ads-fee-description">(Phí quản lý quảng cáo 15% = <span id="adsFeeLabel" class="ads-fee-highlight">3,000,000đ</span>)</span>
                                         </div>
                                     </div>
                                     <span class="option-price">15% ngân sách</span>

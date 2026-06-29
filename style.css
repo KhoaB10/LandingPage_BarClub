@@ -11,11 +11,13 @@
     
     --text-light: #f3f3f6;
     --text-muted: #9595a7;
+    --text-heading: #ffffff;
     
     --neon-cyan-glow: 0 0 12px rgba(0, 240, 255, 0.4), 0 0 30px rgba(0, 240, 255, 0.15);
     --neon-magenta-glow: 0 0 12px rgba(255, 0, 127, 0.4), 0 0 30px rgba(255, 0, 127, 0.15);
     --neon-gold-glow: 0 0 12px rgba(255, 170, 0, 0.4), 0 0 30px rgba(255, 170, 0, 0.15);
     
+    --hero-overlay: linear-gradient(180deg, rgba(8, 8, 12, 0.45) 0%, rgba(8, 8, 12, 0.98) 100%);
     --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     
     --container-max-width: 1200px;
@@ -41,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: #ffffff;
+    color: var(--text-heading);
 }
 
 ul {
@@ -795,7 +797,7 @@ img {
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
-    color: #ffffff;
+    color: var(--text-heading);
 }
 
 .option-desc {
@@ -813,6 +815,73 @@ img {
 
 .calc-option input[type="checkbox"]:checked ~ .option-price {
     color: var(--primary-magenta);
+}
+
+/* Ads Budget Container & Input Styling */
+.ads-budget-container {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+}
+
+body.light-theme .ads-budget-container {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.ads-budget-label {
+    font-size: 0.8rem;
+    color: var(--primary-cyan);
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.ads-budget-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.ads-budget-row input[type="number"] {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-dark);
+    color: var(--text-light);
+    width: 100%;
+    max-width: 170px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+}
+
+.ads-budget-row input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.currency-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.ads-fee-description {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 10px;
+}
+
+.ads-fee-highlight {
+    color: var(--primary-magenta);
+    font-weight: 700;
 }
 
 /* Calculator Summary Box */
@@ -840,7 +909,7 @@ img {
 }
 
 .summary-item span:last-child {
-    color: #ffffff;
+    color: var(--text-heading);
     font-weight: 600;
 }
 
@@ -1428,4 +1497,68 @@ body.light-theme .contact-form-wrapper h3 {
 }
 body.light-theme .contact-form-wrapper label {
     color: #495057;
+}
+
+/* Premium Light Theme Tweaks */
+body.light-theme .hero-subtitle {
+    color: #2c2e35;
+    text-shadow: 0 1px 15px rgba(255, 255, 255, 0.85);
+}
+
+body.light-theme .badge {
+    background: rgba(192, 0, 90, 0.08);
+    color: #c0005a !important;
+    border-color: rgba(192, 0, 90, 0.2);
+}
+
+body.light-theme .section-badge {
+    color: var(--primary-cyan) !important;
+}
+
+body.light-theme .calc-option.selected {
+    background: #ffffff;
+    border-color: var(--primary-cyan);
+    box-shadow: 0 10px 25px rgba(0, 143, 160, 0.08);
+}
+
+body.light-theme .calc-option.selected .custom-checkbox {
+    background: var(--primary-cyan);
+    border-color: var(--primary-cyan);
+}
+
+body.light-theme .custom-checkbox {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .calc-hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .info-icon {
+    background: rgba(0, 143, 160, 0.08) !important;
+    color: var(--primary-cyan) !important;
+}
+
+body.light-theme .portfolio-item {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-theme .portfolio-details {
+    background: #ffffff;
+}
+
+body.light-theme .portfolio-details p {
+    color: #5e5e6e;
+}
+
+@media (max-width: 992px) {
+    body.light-theme .nav-menu {
+        background: rgba(248, 249, 250, 0.98);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    body.light-theme .nav-menu a {
+        color: #212529 !important;
+    }
 }
