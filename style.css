@@ -511,6 +511,13 @@ img {
     border-radius: 50%;
     border: 1px solid var(--border-color);
     flex-shrink: 0;
+    overflow: hidden;
+}
+
+.point-icon svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
 }
 
 .point-item h3 {
@@ -1585,6 +1592,11 @@ body.light-theme input::placeholder, body.light-theme textarea::placeholder {
 }
 
 body.light-theme .service-icon {
+    background: rgba(15, 23, 42, 0.03);
+    border-color: var(--border-color);
+}
+
+body.light-theme .point-icon {
     background: rgba(15, 23, 42, 0.03);
     border-color: var(--border-color);
 }

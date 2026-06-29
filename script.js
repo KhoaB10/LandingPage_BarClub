@@ -367,4 +367,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loadServiceIcon('lottieIconDesign', window.lottieDesignIcon);
     loadServiceIcon('lottieIconAds', window.lottieAdsIcon);
     loadServiceIcon('lottieIconWeb', window.lottieWebIcon);
+
+    /* About Us Section Lottie Icons */
+    loadServiceIcon('lottieIconTarget', window.lottieTargetIcon);
+    loadServiceIcon('lottieIconSocial', window.lottieSocialIcon);
+    loadServiceIcon('lottieIconGrowth', window.lottieGrowthIcon);
 });
