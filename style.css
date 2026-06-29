@@ -1600,3 +1600,20 @@ body.light-theme .point-icon {
     background: rgba(15, 23, 42, 0.03);
     border-color: var(--border-color);
 }
+
+/* Theme-specific visibility controls for point-icons */
+.dark-only-icon {
+    display: inline-block;
+}
+
+#lottieIconSocial svg {
+    display: none !important;
+}
+
+body.light-theme .dark-only-icon {
+    display: none !important;
+}
+
+body.light-theme #lottieIconSocial svg {
+    display: block !important;
+}
