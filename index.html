@@ -23,6 +23,11 @@
     <!-- Lottie Web Runtime & Local Animation Data -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <script src="assets/theme-icon.js"></script>
+    <script src="assets/icon-facebook.js"></script>
+    <script src="assets/icon-tiktok.js"></script>
+    <script src="assets/icon-design.js"></script>
+    <script src="assets/icon-ads.js"></script>
+    <script src="assets/icon-web.js"></script>
     
     <!-- Custom Logic -->
     <script defer src="script.js"></script>
@@ -158,9 +163,7 @@
                 <div class="services-grid">
                     <!-- Service 1: Fanpage Facebook -->
                     <div class="service-card glass-card hover-glow-cyan">
-                        <div class="service-icon icon-cyan">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </div>
+                        <div class="service-icon icon-cyan" id="lottieIconFacebook"></div>
                         <h3>Quản Trị Fanpage Facebook</h3>
                         <p class="service-intro">
                             Vận hành nội dung và hình ảnh Fanpage theo concept chủ đề hàng tháng giúp thương hiệu duy trì tương tác ổn định.
@@ -175,9 +178,7 @@
 
                     <!-- Service 2: Tiktok -->
                     <div class="service-card glass-card hover-glow-magenta">
-                        <div class="service-icon icon-magenta">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </div>
+                        <div class="service-icon icon-magenta" id="lottieIconTiktok"></div>
                         <h3>Xây Dựng Kênh Tiktok & Reels</h3>
                         <p class="service-intro">
                             Phủ sóng thương hiệu trên nền tảng video ngắn thịnh hành nhất. Kích thích thị giác bằng âm thanh sống động.
@@ -192,9 +193,7 @@
 
                     <!-- Service 3: Graphic Design -->
                     <div class="service-card glass-card hover-glow-gold">
-                        <div class="service-icon icon-gold">
-                            <i class="fa-solid fa-palette"></i>
-                        </div>
+                        <div class="service-icon icon-gold" id="lottieIconDesign"></div>
                         <h3>Thiết Kế Đồ Họa & Ấn Phẩm</h3>
                         <p class="service-intro">
                             Kiến tạo ngôn ngữ thiết kế bằng hình ảnh bắt mắt, tôn vinh đẳng cấp không gian và sự kiện bar club.
@@ -209,9 +208,7 @@
 
                     <!-- Service 4: Online Advertising -->
                     <div class="service-card glass-card hover-glow-cyan">
-                        <div class="service-icon icon-cyan">
-                            <i class="fa-solid fa-bullhorn"></i>
-                        </div>
+                        <div class="service-icon icon-cyan" id="lottieIconAds"></div>
                         <h3>Quảng Cáo Online Đa Nền Tảng</h3>
                         <p class="service-intro">
                             Thu hút lượng lớn khách hàng tới quán thông qua các chiến dịch quảng cáo nhắm mục tiêu tối ưu.
@@ -226,9 +223,7 @@
 
                     <!-- Service 5: Web Development -->
                     <div class="service-card glass-card hover-glow-magenta">
-                        <div class="service-icon icon-magenta">
-                            <i class="fa-solid fa-globe"></i>
-                        </div>
+                        <div class="service-icon icon-magenta" id="lottieIconWeb"></div>
                         <h3>Thiết Kế & Chăm Sóc Website</h3>
                         <p class="service-intro">
                             Xây dựng bộ mặt chuyên nghiệp của thương hiệu trên internet, giúp tối ưu hóa công cụ tìm kiếm Google.

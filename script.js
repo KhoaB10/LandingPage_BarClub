@@ -341,4 +341,30 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Lỗi khi tải hoạt ảnh Lottie:', err);
         }
     }
+
+    /* ==========================================================================
+       Lottie Services Icons Initialization (CORS Safe)
+       ========================================================================== */
+    const loadServiceIcon = (containerId, animData) => {
+        const container = document.getElementById(containerId);
+        if (container && typeof lottie !== 'undefined' && animData) {
+            try {
+                lottie.loadAnimation({
+                    container: container,
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    animationData: animData
+                });
+            } catch (err) {
+                console.error(`Lỗi khi tải hoạt ảnh Lottie cho ${containerId}:`, err);
+            }
+        }
+    };
+
+    loadServiceIcon('lottieIconFacebook', window.lottieFacebookIcon);
+    loadServiceIcon('lottieIconTiktok', window.lottieTiktokIcon);
+    loadServiceIcon('lottieIconDesign', window.lottieDesignIcon);
+    loadServiceIcon('lottieIconAds', window.lottieAdsIcon);
+    loadServiceIcon('lottieIconWeb', window.lottieWebIcon);
 });
