@@ -10,7 +10,7 @@
     --primary-gold: #ffaa00;
     
     --text-light: #f3f3f6;
-    --text-muted: #9595a7;
+    --text-muted: #b2b2c5;
     --text-heading: #ffffff;
     
     --neon-cyan-glow: 0 0 12px rgba(0, 240, 255, 0.4), 0 0 30px rgba(0, 240, 255, 0.15);
@@ -1654,8 +1654,13 @@ body.light-theme #lottieIconSocial svg {
 /* Footer contact adaptive elements */
 .footer-contact-item {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 18px !important;
+}
+
+.footer-contact-item:first-of-type {
+    margin-top: 10px !important;
 }
 
 .footer-icon-wrap {
@@ -1665,6 +1670,7 @@ body.light-theme #lottieIconSocial svg {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    margin-top: 3px;
 }
 
 .footer-icon-wrap svg {
